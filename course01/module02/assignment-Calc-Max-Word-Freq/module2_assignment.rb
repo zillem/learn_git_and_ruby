@@ -7,6 +7,7 @@ class LineAnalyzer
   #* highest_wf_words - an array of words with the maximum number of occurrences (calculated)
   #* content          - the string analyzed (provided)
   #* line_number      - the line number analyzed (provided)
+  attr_reader :highest_wf_count, :highest_wf_words, :content, :line_number
 
   #Add the following methods in the LineAnalyzer class.
   #* initialize() - taking a line of text (content) and a line number
@@ -16,17 +17,24 @@ class LineAnalyzer
   #* take in a line of text and line number
   #* initialize the content and line_number attributes
   #* call the calculate_word_frequency() method.
+  def initialize(content, line_number) #CONSTRUCTOR
+    @content = content
+    @line_number = line_number
+  end
 
-  #Implement the calculate_word_frequency() method to:
+#Implement the calculate_word_frequency() method to:
   #* calculate the maximum number of times a single word appears within
   #  provided content and store that in the highest_wf_count attribute.
   #* identify the words that were used the maximum number of times and
   #  store that in the highest_wf_words attribute.
+  def calculate_word_frequency(highest_wf_count)
+    @highest_wf_count = highest_wf_words
+  end
 end
 
 #  Implement a class called Solution. 
 class Solution
-
+attr_reader :analyzers, :highest_count_across_lines, :highest_count_words_across_lines
   # Implement the following read-only attributes in the Solution class.
   #* analyzers - an array of LineAnalyzer objects for each line in the file
   #* highest_count_across_lines - a number with the maximum value for highest_wf_words attribute in the analyzers array.
@@ -35,11 +43,19 @@ class Solution
 
   # Implement the following methods in the Solution class.
   #* analyze_file() - processes 'test.txt' intro an array of LineAnalyzers and stores them in analyzers.
-  #* calculate_line_with_highest_frequency() - determines the highest_count_across_lines and 
-  #  highest_count_words_across_lines attribute values
+def ananlyze_file(txtfile)
+
+end
+#* calculate_line_with_highest_frequency() - determines the highest_count_across_lines and 
+#  highest_count_words_across_lines attribute values
+def calculate_line_with_highest_frequency(highest_count_across_lines, highest_count_words_across_lines)
+  
+end
+  
+ 
   #* print_highest_word_frequency_across_lines() - prints the values of LineAnalyzer objects in 
   #  highest_count_words_across_lines in the specified format
-  
+ 
   # Implement the analyze_file() method() to:
   #* Read the 'test.txt' file in lines 
   #* Create an array of LineAnalyzers for each line in the file
