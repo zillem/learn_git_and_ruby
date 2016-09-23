@@ -17,8 +17,10 @@ class Person
 
   #have a `search` method to locate all people with a matching `last_name`
   def self.search(last_name)
+    #p @@people
     #puts "contents of @@people:#{@@people}"
     @@people.select {|person| person.last_name==last_name}
+    p @@people.select {|person| person.last_name==last_name}
     #accept a `last_name` parameter
     #search the `people` class attribute for instances with the same `last_name`
     #return a collection of matching instances
